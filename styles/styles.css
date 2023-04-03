@@ -1,0 +1,375 @@
+body {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-family: "Rubik", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  margin: 0;
+}
+
+ul,
+ol {
+  padding: 0;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+.container {
+  max-width: 1800px;
+  padding: 60px;
+  margin: 0 auto;
+}
+
+.header {
+  font-family: "Poppins", sans-serif;
+  min-height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(-7.87%, rgba(22, 21, 22, 0.9)), to(rgba(22, 21, 22, 0.6))), url(../src/img/mainBG.webp);
+  background-image: linear-gradient(180deg, rgba(22, 21, 22, 0.9) -7.87%, rgba(22, 21, 22, 0.6) 100%), url(../src/img/mainBG.webp);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #f0efef;
+}
+
+.header__title {
+  text-align: center;
+  font-weight: 700;
+  font-size: 56px;
+  line-height: 1.4;
+  letter-spacing: 1.5px;
+}
+
+.header__content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding-top: 8em;
+  padding-bottom: 5em;
+}
+
+.header__content-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 15px;
+}
+
+.header__content-item + .header__content-item {
+  margin-top: 15px;
+}
+
+.social__bottom-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: end;
+}
+
+.social__bottom-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 54px;
+  width: 54px;
+  border-radius: 50%;
+  -webkit-transition: scale 0.3s ease;
+  transition: scale 0.3s ease;
+}
+.social__bottom-icon:hover {
+  scale: 1.1;
+}
+
+.phone__icon {
+  margin-right: 20px;
+  background-color: rgb(193, 51, 91);
+}
+
+.telegram__icon {
+  margin-right: 20px;
+  background-color: #34aadf;
+}
+
+.whatsapp__icon {
+  background-color: #43d854;
+}
+
+.main {
+  background-color: #f8f8f8;
+  font-size: 1.2em;
+  line-height: 1.2;
+}
+
+.about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.05), 0 1px 4px 0 rgba(51, 51, 51, 0.15);
+          box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.05), 0 1px 4px 0 rgba(51, 51, 51, 0.15);
+  border-radius: 8px;
+}
+
+.about__item:nth-child(odd) {
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
+}
+
+.about__item + .about__item {
+  margin-top: 20px;
+}
+
+.about__item-text {
+  padding: 10px 50px;
+}
+.about__item-text ul {
+  padding-left: 26px;
+}
+.about__item-text * {
+  margin-top: 10px;
+}
+
+.danger {
+  padding-top: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 7px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 0.8em;
+}
+.danger .material-symbols-outlined {
+  font-size: 24px;
+  color: #cb0606;
+}
+
+.table {
+  margin-top: 30px;
+  padding: 20px 50px;
+  background-color: #fff;
+  -webkit-box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.05), 0 1px 4px 0 rgba(51, 51, 51, 0.15);
+          box-shadow: 0 0 2px 0 rgba(51, 51, 51, 0.05), 0 1px 4px 0 rgba(51, 51, 51, 0.15);
+  border-radius: 8px;
+}
+.table table {
+  margin-top: 20px;
+}
+.table table td {
+  padding: 10px;
+  border-bottom: 1px solid #ccc;
+}
+.table table td:first-child {
+  border-right: 1px solid #ccc;
+}
+
+.table__title {
+  text-align: center;
+}
+
+.footer {
+  width: 100%;
+  background-color: #060607;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  color: #f8f8f8;
+}
+
+.policy__link {
+  -webkit-transition: all 0.3s ease-in;
+  transition: all 0.3s ease-in;
+  cursor: pointer;
+}
+
+.policy__link:hover {
+  color: #ff6b08;
+}
+
+.contacts__title {
+  margin-bottom: 20px;
+}
+
+.contacts-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.contacts-item + .contacts-item {
+  margin-top: 15px;
+}
+
+.contacts-link {
+  margin-left: 10px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+
+.bi {
+  -webkit-transition: fill 0.2s ease;
+  transition: fill 0.2s ease;
+}
+
+.contacts-item:hover .bi {
+  fill: #ff6b08;
+}
+.contacts-item:hover .contacts-link {
+  color: #ff6b08;
+}
+
+/*  -----------Modal--------------- */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1000; /* Sit on top */
+  padding-top: 20px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+  position: relative;
+  background-color: #f3f7f7;
+  margin: 0 auto;
+  padding: 0;
+  border: 1px solid #888;
+  width: 50%;
+  min-width: 465px;
+  border-radius: 16px;
+  -webkit-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+          box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  -webkit-animation-name: animatetop;
+  -webkit-animation-duration: 0.4s;
+  animation-name: animatetop;
+  animation-duration: 0.4s;
+}
+
+@media (min-width: 749px) {
+  .modal-content {
+    padding: 40px;
+    width: 90%;
+  }
+}
+/* Add Animation */
+@-webkit-keyframes animatetop {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+@keyframes animatetop {
+  from {
+    top: 300px;
+    opacity: 0;
+  }
+  to {
+    top: 0;
+    opacity: 1;
+  }
+}
+/* The Close Button */
+.close {
+  position: absolute;
+  right: 15px;
+  top: -10px;
+  color: rgb(8, 8, 9);
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  padding-top: 15px;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #f2605b;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  padding: 2px 30px;
+}
+
+.modal-body > .contacts {
+  width: 100%;
+  padding: 20px 0;
+}
+
+.modal__title {
+  margin-bottom: 20px;
+}
+
+.contacts__inner {
+  margin-top: 20px;
+}
+.contacts__inner h3,
+.contacts__inner p {
+  margin-top: 15px;
+}
