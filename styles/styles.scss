@@ -131,18 +131,21 @@ a {
   border-radius: 8px;
   text-align: justify;
 
-  // opacity: 0;
-  // transform: translateY(-20px);
-  // transition: all 1.5s ease;
+  opacity: 0;
+  transform: translateX(60px);
+  transition: all 1.5s ease;
 
   img {
     border-radius: 8px;
-    width: 50%;
+    max-width: 50%;
   }
 }
 
 .about__item:nth-child(odd) {
   flex-direction: row-reverse;
+  // opacity: 0;
+  transform: translateX(-60px);
+  // transition: all 1.5s ease;
 }
 
 .about__item + .about__item {
@@ -452,13 +455,14 @@ a {
   }
 }
 
-.element-animation {
-  opacity: 0;
-  transform: translateY(-40px);
-  transition: all 1.5s ease;
-}
+// .element-animation {
+//   opacity: 0;
+//   transform: translateX(40px);
+//   transition: all 1.5s ease;
+// }
 
-.element-show {
+.element-show,
+.element-show:nth-child(odd) {
   opacity: 1;
-  transform: translateY(0);
+  transform: translateX(0);
 }
