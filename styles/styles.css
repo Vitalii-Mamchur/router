@@ -469,3 +469,16 @@ a {
     font-size: 0.8em;
   }
 }
+.element-animation {
+  opacity: 0;
+  -webkit-transform: translateY(-40px);
+          transform: translateY(-40px);
+  -webkit-transition: all 1.5s ease;
+  transition: all 1.5s ease;
+}
+
+.element-show {
+  opacity: 1;
+  -webkit-transform: translateY(0);
+          transform: translateY(0);
+}

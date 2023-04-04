@@ -131,6 +131,10 @@ a {
   border-radius: 8px;
   text-align: justify;
 
+  // opacity: 0;
+  // transform: translateY(-20px);
+  // transition: all 1.5s ease;
+
   img {
     border-radius: 8px;
     width: 50%;
@@ -446,4 +450,15 @@ a {
   .modal-content {
     font-size: 0.8em;
   }
+}
+
+.element-animation {
+  opacity: 0;
+  transform: translateY(-40px);
+  transition: all 1.5s ease;
+}
+
+.element-show {
+  opacity: 1;
+  transform: translateY(0);
 }
