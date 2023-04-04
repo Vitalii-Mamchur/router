@@ -151,8 +151,8 @@ a {
   opacity: 0;
   -webkit-transform: translateX(60px);
           transform: translateX(60px);
-  -webkit-transition: all 1.5s ease;
-  transition: all 1.5s ease;
+  -webkit-transition: all 1s ease-in;
+  transition: all 1s ease-in;
 }
 .about__item img {
   border-radius: 8px;
