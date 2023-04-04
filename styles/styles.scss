@@ -143,9 +143,7 @@ a {
 
 .about__item:nth-child(odd) {
   flex-direction: row-reverse;
-  // opacity: 0;
   transform: translateX(-60px);
-  // transition: all 1.5s ease;
 }
 
 .about__item + .about__item {
@@ -190,6 +188,7 @@ a {
     td {
       padding: 10px;
       border-bottom: 1px solid #ccc;
+
       &:first-child {
         border-right: 1px solid #ccc;
       }
@@ -203,7 +202,6 @@ a {
 
 .footer {
   width: 100%;
-  // min-width: 1200px;
   background-color: $footer_bg;
 }
 
@@ -234,7 +232,6 @@ a {
 .contacts-item {
   display: flex;
   align-items: center;
-  // cursor: pointer;
 }
 
 .contacts-item + .contacts-item {
@@ -254,6 +251,7 @@ a {
   .bi {
     fill: $active_color;
   }
+
   .contacts-link {
     color: $active_color;
   }
@@ -289,13 +287,6 @@ a {
   animation-name: animatetop;
   animation-duration: 0.4s;
 }
-
-// @media (min-width: 749px) {
-//   .modal-content {
-//     padding: 40px;
-//     width: 90%;
-//   }
-// }
 
 /* Add Animation */
 @-webkit-keyframes animatetop {
@@ -444,6 +435,7 @@ a {
   .table table {
     font-size: 0.7em;
     line-height: 1;
+
     td {
       padding: 7px;
     }
@@ -454,12 +446,6 @@ a {
     font-size: 0.8em;
   }
 }
-
-// .element-animation {
-//   opacity: 0;
-//   transform: translateX(40px);
-//   transition: all 1.5s ease;
-// }
 
 .element-show,
 .element-show:nth-child(odd) {
