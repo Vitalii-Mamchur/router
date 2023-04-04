@@ -27,3 +27,11 @@ window.onclick = function (event) {
     document.body.style.overflow = '';
   }
 };
+
+// When the user press Esc, close it
+window.addEventListener('keydown', (e) => {
+  if (e.code == 'Escape') {
+    modal.style.display = 'none';
+    document.body.style.overflow = '';
+  }
+});
