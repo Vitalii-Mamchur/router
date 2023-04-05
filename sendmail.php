@@ -2,12 +2,12 @@
   use PHPMailer\PHPMailer\PHPMailer;
   use PHPMailer\PHPMailer\Exception;
 
-  require 'PHPMailer-6.8.0/src/Exception.php';
-  require 'PHPMailer-6.8.0/src/PHPMailer.php';
+  require 'phpmailer/src/Exception.php';
+  require 'phpmailer/src/PHPMailer.php';
 
   $mail = new PHPMailer(true);
   $mail->CharSet = 'UTF-8';
-  $mail->setLanguage('ru', 'PHPMailer-6.8.0/language/');
+  $mail->setLanguage('ru', 'phpmailer/language/');
   $mail->IsHTML(true);
 
   // who is the letter from?
@@ -33,6 +33,8 @@
   $mail->Body = $body;
 
   // Sending
+  $mail->send();
+
   if(!$mail->send()){
     $message = 'Error';
   }else{

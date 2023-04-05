@@ -8,7 +8,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let error = formValidate(form);
 
     let formData = new FormData(form);
-    console.log(formData);
 
     if (error === 0) {
       form.classList.add('_sending');
