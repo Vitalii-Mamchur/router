@@ -206,6 +206,35 @@
         </div>
       </div>
     </section>
+
+    <section class="container">
+      <div class="form">
+        <form action="#" id="form" class="form__body">
+          <div class="form__item">
+            <label for="formName" class="form__label">Ім'я*:</label>
+            <input type="text" id="formName" name="name" class="form__input _req">
+          </div>
+          <div class="form__item">
+            <label for="formPhone" class="form__label">Телефон*:</label>
+            <input type="text" id="formPhone" name="phone" class="form__input _req _phone">
+          </div>
+          <div class="form__item">
+            <label for="formMessage" class="form__label">Повідомлення:</label>
+            <textarea name="messadge" id="formMessage" class="form__input"></textarea>
+          </div>
+          <div class="form__item">
+            <div class="checkbox">
+              <input type="checkbox" id="formAgreement" name="agreement" class="checkbox__input _req" checked>
+              <label for="formAgreement" class="checkbox__label"> <span>Я, даю свою згоду на обробку персональних даних
+                  відповідно з <a id="myBtn"> Умовами</a>*.</span> </label>
+            </div>
+          </div>
+          <button type="submit" class="form__button">Відправити</button>
+          <p class="form__span">* - поля, обов'язкові для заповнення!</p>
+        </form>
+      </div>
+    </section>
+
   </main>
 
   <div id="myModal" class="modal">
@@ -280,7 +309,7 @@
   <footer class="footer">
     <section class="container">
       <div class="footer__inner">
-        <a class="policy__link" id="myBtn">Privacy Policy</a>
+        <!-- <a class="policy__link" id="myBtn">Privacy Policy</a> -->
         <p>©2023 routersForEveryone. All rights reserved</p>
         <div class="contacts">
           <h3 class="contacts__title">Контакти:</h3>
@@ -315,8 +344,9 @@
       </div>
     </section>
   </footer>
-  <script src="./main.js"></script>
+  <script src="./modal.js"></script>
   <script src="./animation.js"></script>
+  <script src="./form.js"></script>
 </body>
 
 </html>
