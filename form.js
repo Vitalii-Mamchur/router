@@ -38,7 +38,12 @@ document.addEventListener('DOMContentLoaded', () => {
       const input = formReq[i];
       formRemoveError(input);
 
-      if (input.classList.contains('_phone')) {
+      if (input.classList.contains('_email')) {
+        if (emailTest(input)) {
+          formAddError(input);
+          error++;
+        }
+      } else if (input.classList.contains('_phone')) {
         if (phoneTest(input)) {
           formAddError(input);
           error++;
@@ -68,9 +73,14 @@ document.addEventListener('DOMContentLoaded', () => {
     input.parentElement.classList.remove('_error');
     input.classList.remove('_error');
   }
-  // function for test phone
 
+  // function for test phone
   function phoneTest(input) {
     return !/^((\+?3)?8)?0\d{9}$/.test(input.value);
+  }
+
+  // function for test e-mail
+  function emailTest(input) {
+    return !/^\w+([\/-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
 });
