@@ -1,3 +1,7 @@
+const TOKEN = '6197157348:AAEZa6TtaUPM8HMUsypIRcigltO5jtrnAi4';
+const CHAT_ID = '-1001979411422';
+const URI_API = `https://api.telegram.org/bot${TOKEN}/sendMessage`;
+
 document.addEventListener('DOMContentLoaded', () => {
   const form = document.getElementById('form');
   form.addEventListener('submit', formSend);
@@ -6,25 +10,35 @@ document.addEventListener('DOMContentLoaded', () => {
     e.preventDefault();
 
     let error = formValidate(form);
-
     let formData = new FormData(form);
+
+    let message = `<b>Заявка з сайту\n</b>`;
+    message += `<b>Name: </b> ${this.name.value}\n`;
+    message += `<b>Phone: </b> ${this.phone.value}\n`;
+    message += `<b>E-mail: </b> ${this.email.value}\n`;
+    this.message.value === ''
+      ? message
+      : (message += `<b>Message: </b> ${this.message.value}\n`);
 
     if (error === 0) {
       form.classList.add('_sending');
-      let response = await fetch('sendmail.php', {
-        method: 'POST',
-        body: formData,
-      });
 
-      if (response.ok) {
-        let result = await response.json();
-        alert(result.message);
-        form.reset();
-        form.classList.remove('_sending');
-      } else {
-        alert('Похибка відправки даних форми!');
-        form.classList.remove('_sending');
-      }
+      axios
+        .post(URI_API, {
+          chat_id: CHAT_ID,
+          text: message,
+          parse_mode: 'html',
+          disable_notification: false,
+        })
+        .then((res) => {
+          console.log(message);
+          form.reset();
+          form.classList.remove('_sending');
+        })
+        .catch((err) => {
+          alert(`Похибка відправки даних форми!\n ${err.message}`);
+          form.classList.remove('_sending');
+        });
     } else {
       alert("Заповніть обов'язкові поля");
     }
