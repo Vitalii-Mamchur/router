@@ -15,9 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
     let message = `<b>Заявка з сайту\n</b>`;
     message += `<b>Name: </b> ${this.name.value}\n`;
     message += `<b>Phone: </b> ${this.phone.value}\n`;
-    this.email.value === ''
-      ? message
-      : (message += `<b>E-mail: </b> ${this.email.value}\n`);
     this.message.value === ''
       ? message
       : (message += `<b>Message: </b> ${this.message.value}\n`);
@@ -33,7 +30,6 @@ document.addEventListener('DOMContentLoaded', () => {
           disable_notification: false,
         })
         .then((res) => {
-          console.log(message);
           form.reset();
           form.classList.remove('_sending');
         })

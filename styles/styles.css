@@ -103,7 +103,7 @@ a {
   margin-top: 15px;
 }
 
-.social__bottom-block {
+/* .social__bottom-block {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -146,7 +146,7 @@ a {
 .facebook__icon {
   background-color: #f5f4f6;
   fill: #215fca;
-}
+} */
 
 .main {
   background-color: #f8f8f8;
@@ -397,7 +397,7 @@ a {
 }
 
 .modal-body > .contacts {
-  width: 100%;
+  max-width: 90vw;
   padding: 20px 0;
 }
 
