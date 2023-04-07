@@ -85,8 +85,8 @@ a {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding-top: 8em;
-  padding-bottom: 5em;
+  padding-top: 4em;
+  padding-bottom: 3em;
 }
 
 .header__content-item {
