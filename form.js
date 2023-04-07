@@ -15,7 +15,9 @@ document.addEventListener('DOMContentLoaded', () => {
     let message = `<b>Заявка з сайту\n</b>`;
     message += `<b>Name: </b> ${this.name.value}\n`;
     message += `<b>Phone: </b> ${this.phone.value}\n`;
-    message += `<b>E-mail: </b> ${this.email.value}\n`;
+    this.email.value === ''
+      ? message
+      : (message += `<b>E-mail: </b> ${this.email.value}\n`);
     this.message.value === ''
       ? message
       : (message += `<b>Message: </b> ${this.message.value}\n`);
@@ -52,12 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
       const input = formReq[i];
       formRemoveError(input);
 
-      if (input.classList.contains('_email')) {
-        if (emailTest(input)) {
-          formAddError(input);
-          error++;
-        }
-      } else if (input.classList.contains('_phone')) {
+      if (input.classList.contains('_phone')) {
         if (phoneTest(input)) {
           formAddError(input);
           error++;
@@ -83,6 +80,7 @@ document.addEventListener('DOMContentLoaded', () => {
     input.parentElement.classList.add('_error');
     input.classList.add('_error');
   }
+
   function formRemoveError(input) {
     input.parentElement.classList.remove('_error');
     input.classList.remove('_error');
@@ -91,10 +89,5 @@ document.addEventListener('DOMContentLoaded', () => {
   // function for test phone
   function phoneTest(input) {
     return !/^((\+?3)?8)?0\d{9}$/.test(input.value);
-  }
-
-  // function for test e-mail
-  function emailTest(input) {
-    return !/^\w+([\/-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,8})+$/.test(input.value);
   }
 });

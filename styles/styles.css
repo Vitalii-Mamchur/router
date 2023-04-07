@@ -470,6 +470,10 @@ a {
   transition: all 0.3s ease 0s;
 }
 
+.form__input::placeholder {
+  opacity: 0.5;
+}
+
 .form__input:focus {
   -webkit-box-shadow: 0 0 15px #5f9044;
   box-shadow: 0 0 15px #5f9044;
